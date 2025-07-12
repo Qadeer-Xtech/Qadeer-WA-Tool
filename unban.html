@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WHATSAPP UNBANNED TOOL</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      color: #00ff00;
+      background: #000;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      width: 100%;
+      max-width: 500px;
+      padding: 25px;
+      background: #111;
+      border: 1px solid #00ff00;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    }
+    h1 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 25px;
+      color: #00ff00;
+      text-shadow: 0 0 5px #00ff00;
+    }
+    label {
+      display: block;
+      margin: 20px 0 8px;
+      color: #00ff00;
+      font-weight: bold;
+    }
+    select, input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      background: #000;
+      color: #00ff00;
+      border: 1px solid #00ff00;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 15px;
+      margin-top: 25px;
+      background: #003300;
+      color: #00ff00;
+      border: 1px solid #00ff00;
+      font-family: 'Courier New', monospace;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    button:hover {
+      background: #00ff00;
+      color: #000;
+    }
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 14px;
+      color: #00ffee;
+      font-weight: bold;
+      text-shadow: 0 0 6px #00ffff;
+    }
+    .whatsapp-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 15px;
+      color: #00ff00;
+      text-decoration: none;
+      border: 1px solid #00ff00;
+      transition: all 0.3s;
+    }
+    .whatsapp-link:hover {
+      background: #00ff00;
+      color: #000;
+    }
+    hr {
+      border: 0;
+      height: 1px;
+      background: #00ff00;
+      margin: 20px 0;
+      opacity: 0.3;
+    }
+    .prompt-option {
+      font-size: 14px;
+    }
+    #phoneNumber {
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      width: 95%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>WHATSAPP UNBAN TOOL</h1><label>SELECT VIP MODE:</label>
+<select id="banType">
+  <option value="normal">VIP UNBAN REQUEST</option>
+  <option value="permanent" selected>VIP FINAL REVIEW</option>
+</select>
+
+<hr>
+
+<label>ENTER YOUR NUMBER</label>
+<input type="text" id="phoneNumber" placeholder="e.g. +923001234567">
+
+<hr>
+
+<label>SELECT VIP APPEAL TYPE:</label>
+<select id="promptSelect">
+  <option value="0" class="prompt-option">🟢 VIP 1: Soft Apology Appeal</option>
+  <option value="1" class="prompt-option">🟢 VIP 2: System Error Clarification</option>
+  <option value="2" class="prompt-option">🟢 VIP 3: Future Compliance Promise</option>
+  <option value="3" class="prompt-option">🟢 VIP 4: Personal Emergency Case</option>
+  <option value="4" class="prompt-option">🟢 VIP 5: Misunderstood Activity Appeal</option>
+  <option value="5" class="prompt-option" selected>🟢 VIP 6: Final Hope Declaration</option>
+</select>
+
+<button onclick="sendRequest()">SEND UNBAN REQUEST</button>
+
+<div class="footer">
+  🚀 DEVELOPED BY <span style="color:#ffffff;">QADEER-KHAN</span> &nbsp;|&nbsp; © 2025 &nbsp;|&nbsp; <span style="color:#00ff00;">ALL SYSTEMS OPERATIONAL</span>
+  <br>
+  <a class="whatsapp-link" href="https://whatsapp.com/channel/0029Vaw6yRaBPzjZPtVtA80A" target="_blank">JOIN OUR WHATSAPP CHANNEL</a>
+</div>
+
+  </div>  <script>
+    const prompts = {
+      normal: [
+        "Dear Support, my number {number} was likely flagged by mistake. Kindly review and restore as soon as possible.",
+        "Greetings, it seems that {number} was wrongly banned, possibly due to a system error. Please verify and assist.",
+        "Hello Team, I fully respect WhatsApp rules. Please unban {number} and I promise to strictly follow all policies moving forward.",
+        "My number {number} was banned during a family emergency. Kindly review and reactivate it urgently.",
+        "I believe WhatsApp misunderstood my recent activity on {number}. Kindly review and guide if correction is needed.",
+        "Dear Support, this is my final plea. I request your mercy in restoring number {number} for continued communication."
+      ],
+      permanent: [
+        "My number {number} has been permanently banned. I deeply regret this. Please grant one final opportunity for restoration.",
+        "Respectfully requesting re-evaluation of number {number}. I assure you full compliance and no future violations.",
+        "Hello, I kindly request WhatsApp to reconsider the ban on {number}. I truly need access back for important communications.",
+        "I take full responsibility for any violations. Kindly review number {number} with understanding. This is my last hope.",
+        "Dear Support, please allow a final review of {number}. If any errors occurred unknowingly, I am ready to cooperate and resolve.",
+        "Final appeal: Please verify account {number} once again. I rely on WhatsApp both professionally and personally. Your help means everything."
+      ]
+    };
+
+    function sendRequest() {
+      const number = document.getElementById('phoneNumber').value;
+      const type = document.getElementById('banType').value;
+      const promptIndex = document.getElementById('promptSelect').value;
+      const selectedPrompt = prompts[type][promptIndex].replace('{number}', number);
+
+      const subject = 'Unban Request ';
+      const mailtoLink = 'mailto:support@support.whatsapp.com?subject=' + 
+                       encodeURIComponent(subject) + 
+                       '&body=' + 
+                       encodeURIComponent(selectedPrompt);
+
+      window.location.href = mailtoLink;
+    }
+  </script></body>
+</html>

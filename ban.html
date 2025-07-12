@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WHATSAPP BAN TOOL</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      color: #ff4444;
+      background: #000;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      width: 100%;
+      max-width: 500px;
+      padding: 25px;
+      background: #111;
+      border: 1px solid #ff4444;
+      box-shadow: 0 0 15px rgba(255, 50, 50, 0.4);
+    }
+    h1 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 25px;
+      color: #ff4444;
+      text-shadow: 0 0 5px #ff4444;
+    }
+    label {
+      display: block;
+      margin: 20px 0 8px;
+      color: #ff4444;
+      font-weight: bold;
+    }
+    select, input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      background: #000;
+      color: #ff4444;
+      border: 1px solid #ff4444;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 15px;
+      margin-top: 25px;
+      background: #330000;
+      color: #ff4444;
+      border: 1px solid #ff4444;
+      font-family: 'Courier New', monospace;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    button:hover {
+      background: #ff4444;
+      color: #000;
+    }
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 14px;
+      color: #ffcccc;
+      font-weight: bold;
+      text-shadow: 0 0 6px #ff5555;
+    }
+    .whatsapp-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 15px;
+      color: #ff4444;
+      text-decoration: none;
+      border: 1px solid #ff4444;
+      transition: all 0.3s;
+    }
+    .whatsapp-link:hover {
+      background: #ff4444;
+      color: #000;
+    }
+    hr {
+      border: 0;
+      height: 1px;
+      background: #ff4444;
+      margin: 20px 0;
+      opacity: 0.3;
+    }
+    .prompt-option {
+      font-size: 14px;
+    }
+    #scammerNumber {
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      width: 95%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>WHATSAPP SCAMMER BAN TOOL</h1>
+
+    <label>SCAMMER COUNTRY TYPE:</label>
+    <select id="countryType">
+      <option value="pk">🇵🇰 Pakistan-Based Fraud</option>
+      <option value="in">🇮🇳 India-Based Scam</option>
+      <option value="bd">🇧🇩 Bangladesh Fraudster</option>
+      <option value="ng">🇳🇬 Nigeria Scam Ring</option>
+      <option value="us">🇺🇸 International Fake Number</option>
+    </select>
+
+    <hr>
+
+    <label>ENTER SCAMMER NUMBER</label>
+    <input type="text" id="scammerNumber" placeholder="e.g. +923001234567">
+
+    <hr>
+
+    <label>SELECT REPORT TYPE:</label>
+    <select id="reportType">
+      <option value="0" class="prompt-option">🚫 Scam: Fake Investment Schemes</option>
+      <option value="1" class="prompt-option">🚫 Fraud: Asking for OTP / Code</option>
+      <option value="2" class="prompt-option">🚫 Impersonation: Pretending as Official</option>
+      <option value="3" class="prompt-option">🚫 Threatening Messages</option>
+      <option value="4" class="prompt-option">🚫 Sharing Illegal Content</option>
+      <option value="5" class="prompt-option" selected>🚫 Using Stolen Identity</option>
+    </select>
+
+    <button onclick="sendBanRequest()">SEND BAN REPORT</button>
+
+    <div class="footer">
+      🚨 DEVELOPED BY <span style="color:#ffffff;">QADEER-KHAN</span> &nbsp;|&nbsp; © 2025 &nbsp;|&nbsp; <span style="color:#ff4444;">ANTI-SCAMMER UNIT</span>
+      <br>
+      <a class="whatsapp-link" href="https://whatsapp.com/channel/0029Vaw6yRaBPzjZPtVtA80A" target="_blank">JOIN OUR WHATSAPP CHANNEL</a>
+    </div>
+  </div>
+
+  <script>
+    const banPrompts = {
+      pk: [
+        "This number {number} is involved in fake investment scams across Pakistan. Kindly block and review urgently.",
+        "Scammer {number} was asking for OTP and login verification codes posing as official support. Please ban immediately.",
+        "{number} is pretending to be a government officer in Pakistan. Likely a scammer.",
+        "This number {number} is sending threats via WhatsApp. Please investigate and block it permanently.",
+        "{number} is sharing suspicious illegal content targeting local users.",
+        "The number {number} is using stolen Pakistani citizen ID details. Urgent ban needed."
+      ],
+      in: [
+        "This number {number} is running scam calls and fake bank schemes in India.",
+        "Scammer {number} was asking for 6-digit OTP, claiming bank verification.",
+        "{number} is impersonating police or cyber security department. Fraud case.",
+        "Threat messages received from number {number}. Needs immediate action.",
+        "{number} sharing illegal adult material. Report under IT Act.",
+        "The user behind {number} is using stolen Aadhaar identity."
+      ],
+      bd: [
+        "Reported scammer {number} from Bangladesh running Telegram crypto groups.",
+        "This number {number} requested OTP pretending to be bKash support.",
+        "{number} claims to be government but is fake. Scam alert.",
+        "Threat message traced from {number}. Need WhatsApp review.",
+        "Sharing restricted content through WhatsApp: {number}.",
+        "Using fake identity documents on number {number}."
+      ],
+      ng: [
+        "Nigerian fraud ring number {number} used in romance scams.",
+        "Asked for OTP and PayPal codes: {number}. Fraud risk.",
+        "Claiming to be USA consulate: {number}. Pure scam.",
+        "Extortion attempt via WhatsApp from {number}.",
+        "Sending malware links via {number}.",
+        "Using photos and ID of another person on WhatsApp: {number}."
+      ],
+      us: [
+        "Number {number} linked to international fraud scheme using fake US identity.",
+        "Suspicious activity from number {number}, phishing attempt detected.",
+        "{number} used to impersonate WhatsApp official staff. Dangerous!",
+        "This number {number} sends extortion messages. Must be blocked.",
+        "{number} sharing illegal files and piracy content.",
+        "Likely cloned number: {number}. Using someone else's name and picture."
+      ]
+    };
+
+    function sendBanRequest() {
+      const number = document.getElementById('scammerNumber').value;
+      const type = document.getElementById('countryType').value;
+      const reportIndex = document.getElementById('reportType').value;
+      const selectedPrompt = banPrompts[type][reportIndex].replace('{number}', number);
+
+      const subject = 'Scammer Report - ' + number;
+      const mailtoLink = 'mailto:report@support.whatsapp.com?subject=' + 
+                         encodeURIComponent(subject) + 
+                         '&body=' + 
+                         encodeURIComponent(selectedPrompt);
+
+      window.location.href = mailtoLink;
+    }
+  </script>
+</body>
+</html>
