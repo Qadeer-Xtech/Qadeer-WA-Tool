@@ -4,9 +4,9 @@
     { "src": "index.html", "use": "@vercel/static" }
   ],
   "routes": [
+    { "src": "/", "dest": "/index.html" },
     { "src": "/ban", "dest": "/ban.html" },
     { "src": "/ban2", "dest": "/ban2.html" },
-    { "src": "/unban", "dest": "/unban.html" },
-    { "src": "/", "dest": "/index.html" }
+    { "src": "/unban", "dest": "/unban.html" }
   ]
 }
