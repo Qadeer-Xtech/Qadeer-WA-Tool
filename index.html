@@ -1,104 +1,173 @@
 <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VIP WHATSAPP TOOLS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WHATSAPP UNBANNED TOOL</title>
   <style>
     body {
       margin: 0;
-      background: #000;
       font-family: 'Courier New', monospace;
-      color: #00ffff;
-    }
-    .section { display: none; }
-    .menu {
+      color: #00ff00;
+      background: #000;
+      padding: 20px;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       min-height: 100vh;
     }
-    .btn {
-      display: inline-block;
-      width: 240px;
-      padding: 15px 25px;
-      margin: 15px;
-      background: transparent;
-      color: #00ffff;
-      border: 2px solid #00ffff;
+    .container {
+      width: 100%;
+      max-width: 500px;
+      padding: 25px;
+      background: #111;
+      border: 1px solid #00ff00;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    }
+    h1 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 25px;
+      color: #00ff00;
+      text-shadow: 0 0 5px #00ff00;
+    }
+    label {
+      display: block;
+      margin: 20px 0 8px;
+      color: #00ff00;
+      font-weight: bold;
+    }
+    select, input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      background: #000;
+      color: #00ff00;
+      border: 1px solid #00ff00;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 15px;
+      margin-top: 25px;
+      background: #003300;
+      color: #00ff00;
+      border: 1px solid #00ff00;
+      font-family: 'Courier New', monospace;
       font-size: 18px;
       font-weight: bold;
-      text-decoration: none;
-      border-radius: 10px;
-      text-shadow: 0 0 6px #00ffff;
-      box-shadow: 0 0 12px #00ffff;
       cursor: pointer;
+      transition: all 0.3s;
     }
-    .btn:hover {
-      background: #00ffff;
+    button:hover {
+      background: #00ff00;
       color: #000;
+    }
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 14px;
+      color: #00ffee;
+      font-weight: bold;
+      text-shadow: 0 0 6px #00ffff;
+    }
+    .whatsapp-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 15px;
+      color: #00ff00;
+      text-decoration: none;
+      border: 1px solid #00ff00;
+      transition: all 0.3s;
+    }
+    .whatsapp-link:hover {
+      background: #00ff00;
+      color: #000;
+    }
+    hr {
+      border: 0;
+      height: 1px;
+      background: #00ff00;
+      margin: 20px 0;
+      opacity: 0.3;
+    }
+    .prompt-option {
+      font-size: 14px;
+    }
+    #phoneNumber {
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      width: 95%;
     }
   </style>
 </head>
 <body>
-  <div class="menu" id="main-menu">
-    <button class="btn" onclick="showSection('unban')">WA UNBAN TOOL</button>
-    <button class="btn" onclick="showSection('ban')">WA BAN TOOL</button>
-    <button class="btn" onclick="showSection('ban2')">WA BAN2 TOOL</button>
-    <footer style="margin-top:20px; text-align:center; font-size:14px; color:#00ffff;">🔐 <span>DEVELOPED BY QADEER-KHAN • © 2025</span></footer>
-  </div>  <div id="unban" class="section">
-    <!-- UNBAN.HTML FULL CONTENT -->
-    <div class="container"> <h1>WHATSAPP UNBAN TOOL</h1><label>SELECT VIP MODE:</label><select id="banType"><option value="normal">VIP UNBAN REQUEST</option><option value="permanent" selected>VIP FINAL REVIEW</option></select><hr><label>ENTER YOUR NUMBER</label><input type="text" id="phoneNumber" placeholder="e.g. +923001234567"><hr><label>SELECT VIP APPEAL TYPE:</label><select id="promptSelect"><option value="0" class="prompt-option">🟢 VIP 1: Soft Apology Appeal</option><option value="1" class="prompt-option">🟢 VIP 2: System Error Clarification</option><option value="2" class="prompt-option">🟢 VIP 3: Future Compliance Promise</option><option value="3" class="prompt-option">🟢 VIP 4: Personal Emergency Case</option><option value="4" class="prompt-option">🟢 VIP 5: Misunderstood Activity Appeal</option><option value="5" class="prompt-option" selected>🟢 VIP 6: Final Hope Declaration</option></select><button onclick="sendRequest()">SEND UNBAN REQUEST</button><div class="footer"> 🚀 DEVELOPED BY <span style="color:#ffffff;">QADEER-KHAN</span> &nbsp;|&nbsp; © 2025 &nbsp;|&nbsp; <span style="color:#00ff00;">ALL SYSTEMS OPERATIONAL</span> <br><a class="whatsapp-link" href="https://whatsapp.com/channel/0029Vaw6yRaBPzjZPtVtA80A" target="_blank">JOIN OUR WHATSAPP CHANNEL</a></div> </div>
-  </div>
-  <div id="ban" class="section">
-    <!-- BAN.HTML FULL CONTENT -->
-    <div class="container"><h1>WHATSAPP SCAMMER BAN TOOL</h1><label>SCAMMER COUNTRY TYPE:</label><select id="countryType"><option value="pk">🇵🇰 Pakistan-Based Fraud</option><option value="in">🇮🇳 India-Based Scam</option><option value="bd">🇧🇩 Bangladesh Fraudster</option><option value="ng">🇳🇬 Nigeria Scam Ring</option><option value="us">🇺🇸 International Fake Number</option></select><hr><label>ENTER SCAMMER NUMBER</label><input type="text" id="scammerNumber" placeholder="e.g. +923001234567"><hr><label>SELECT REPORT TYPE:</label><select id="reportType"><option value="0" class="prompt-option">🚫 Scam: Fake Investment Schemes</option><option value="1" class="prompt-option">🚫 Fraud: Asking for OTP / Code</option><option value="2" class="prompt-option">🚫 Impersonation: Pretending as Official</option><option value="3" class="prompt-option">🚫 Threatening Messages</option><option value="4" class="prompt-option">🚫 Sharing Illegal Content</option><option value="5" class="prompt-option" selected>🚫 Using Stolen Identity</option></select><button onclick="sendBanRequest()">SEND BAN REPORT</button><div class="footer"> 🚨 DEVELOPED BY <span style="color:#ffffff;">QADEER-KHAN</span> &nbsp;|&nbsp; © 2025 &nbsp;|&nbsp; <span style="color:#ff4444;">ANTI-SCAMMER UNIT</span><br><a class="whatsapp-link" href="https://whatsapp.com/channel/0029Vaw6yRaBPzjZPtVtA80A" target="_blank">JOIN OUR WHATSAPP CHANNEL</a></div></div>
-  </div>
-  <div id="ban2" class="section">
-    <!-- BAN2.HTML FULL CONTENT -->
-    <div class="container"><h1>WHATSAPP BAN TOOL</h1><label>SELECT BAN MODE:</label><select id="banType2"><option value="normal">⚠️ Quick Ban Report</option><option value="permanent" selected>🚨 Final Review Request</option></select><hr><label>ENTER SCAMMER NUMBER</label><input type="text" id="phoneNumber2" placeholder="e.g. +923001234567"><hr><label>SELECT BAN REPORT TYPE:</label><select id="promptSelect2"><option value="0" class="prompt-option">🚫 Scam: Fake Investment</option><option value="1" class="prompt-option">🚫 OTP Fraud</option><option value="2" class="prompt-option">🚫 Impersonation</option><option value="3" class="prompt-option">🚫 Threatening Messages</option><option value="4" class="prompt-option">🚫 Illegal Sharing</option><option value="5" class="prompt-option" selected>🚫 Stolen Identity</option></select><button onclick="sendRequest2()">SEND BAN REQUEST</button><div class="footer"> 🚨 DEVELOPED BY <span style="color:#ffffff;">QADEER-KHAN</span> &nbsp;|&nbsp; © 2025 &nbsp;|&nbsp; <span style="color:#ff4444;">ANTI-SCAM SYSTEM</span><br><a class="whatsapp-link" href="https://whatsapp.com/channel/0029Vaw6yRaBPzjZPtVtA80A" target="_blank">JOIN OUR WHATSAPP CHANNEL</a></div></div>
-  </div>  <script>
-    function showSection(id) {
-      document.getElementById('main-menu').style.display = 'none';
-      ['unban', 'ban', 'ban2'].forEach(s => {
-        document.getElementById(s).style.display = 'none';
-      });
-      document.getElementById(id).style.display = 'block';
-    }
+  <div class="container">
+    <h1>WHATSAPP UNBAN TOOL</h1><label>SELECT VIP MODE:</label>
+<select id="banType">
+  <option value="normal">VIP UNBAN REQUEST</option>
+  <option value="permanent" selected>VIP FINAL REVIEW</option>
+</select>
 
-    function goBack() {
-      ['unban', 'ban', 'ban2'].forEach(s => {
-        document.getElementById(s).style.display = 'none';
-      });
-      document.getElementById('main-menu').style.display = 'flex';
+<hr>
+
+<label>ENTER YOUR NUMBER</label>
+<input type="text" id="phoneNumber" placeholder="e.g. +923001234567">
+
+<hr>
+
+<label>SELECT VIP APPEAL TYPE:</label>
+<select id="promptSelect">
+  <option value="0" class="prompt-option">🟢 VIP 1: Soft Apology Appeal</option>
+  <option value="1" class="prompt-option">🟢 VIP 2: System Error Clarification</option>
+  <option value="2" class="prompt-option">🟢 VIP 3: Future Compliance Promise</option>
+  <option value="3" class="prompt-option">🟢 VIP 4: Personal Emergency Case</option>
+  <option value="4" class="prompt-option">🟢 VIP 5: Misunderstood Activity Appeal</option>
+  <option value="5" class="prompt-option" selected>🟢 VIP 6: Final Hope Declaration</option>
+</select>
+
+<button onclick="sendRequest()">SEND UNBAN REQUEST</button>
+
+<div class="footer">
+  🚀 DEVELOPED BY <span style="color:#ffffff;">QADEER-KHAN</span> &nbsp;|&nbsp; © 2025 &nbsp;|&nbsp; <span style="color:#00ff00;">ALL SYSTEMS OPERATIONAL</span>
+  <br>
+  <a class="whatsapp-link" href="https://whatsapp.com/channel/0029Vaw6yRaBPzjZPtVtA80A" target="_blank">JOIN OUR WHATSAPP CHANNEL</a>
+</div>
+
+  </div>  <script>
+    const prompts = {
+      normal: [
+        "Dear Support, my number {number} was likely flagged by mistake. Kindly review and restore as soon as possible.",
+        "Greetings, it seems that {number} was wrongly banned, possibly due to a system error. Please verify and assist.",
+        "Hello Team, I fully respect WhatsApp rules. Please unban {number} and I promise to strictly follow all policies moving forward.",
+        "My number {number} was banned during a family emergency. Kindly review and reactivate it urgently.",
+        "I believe WhatsApp misunderstood my recent activity on {number}. Kindly review and guide if correction is needed.",
+        "Dear Support, this is my final plea. I request your mercy in restoring number {number} for continued communication."
+      ],
+      permanent: [
+        "My number {number} has been permanently banned. I deeply regret this. Please grant one final opportunity for restoration.",
+        "Respectfully requesting re-evaluation of number {number}. I assure you full compliance and no future violations.",
+        "Hello, I kindly request WhatsApp to reconsider the ban on {number}. I truly need access back for important communications.",
+        "I take full responsibility for any violations. Kindly review number {number} with understanding. This is my last hope.",
+        "Dear Support, please allow a final review of {number}. If any errors occurred unknowingly, I am ready to cooperate and resolve.",
+        "Final appeal: Please verify account {number} once again. I rely on WhatsApp both professionally and personally. Your help means everything."
+      ]
+    };
+
+    function sendRequest() {
+      const number = document.getElementById('phoneNumber').value;
+      const type = document.getElementById('banType').value;
+      const promptIndex = document.getElementById('promptSelect').value;
+      const selectedPrompt = prompts[type][promptIndex].replace('{number}', number);
+
+      const subject = 'Unban Request ';
+      const mailtoLink = 'mailto:support@support.whatsapp.com?subject=' + 
+                       encodeURIComponent(subject) + 
+                       '&body=' + 
+                       encodeURIComponent(selectedPrompt);
+
+      window.location.href = mailtoLink;
     }
-  </script>  <!-- UNBAN SCRIPT -->  <script>const prompts = { normal: ["Dear Support, my number {number} was likely flagged by mistake. Kindly review and restore as soon as possible.","Greetings, it seems that {number} was wrongly banned, possibly due to a system error. Please verify and assist.","Hello Team, I fully respect WhatsApp rules. Please unban {number} and I promise to strictly follow all policies moving forward.","My number {number} was banned during a family emergency. Kindly review and reactivate it urgently.","I believe WhatsApp misunderstood my recent activity on {number}. Kindly review and guide if correction is needed.","Dear Support, this is my final plea. I request your mercy in restoring number {number} for continued communication."], permanent: ["My number {number} has been permanently banned. I deeply regret this. Please grant one final opportunity for restoration.","Respectfully requesting re-evaluation of number {number}. I assure you full compliance and no future violations.","Hello, I kindly request WhatsApp to reconsider the ban on {number}. I truly need access back for important communications.","I take full responsibility for any violations. Kindly review number {number} with understanding. This is my last hope.","Dear Support, please allow a final review of {number}. If any errors occurred unknowingly, I am ready to cooperate and resolve.","Final appeal: Please verify account {number} once again. I rely on WhatsApp both professionally and personally. Your help means everything."]};
-function sendRequest() {
-  const number = document.getElementById('phoneNumber').value;
-  const type = document.getElementById('banType').value;
-  const promptIndex = document.getElementById('promptSelect').value;
-  const selectedPrompt = prompts[type][promptIndex].replace('{number}', number);
-  const subject = 'Unban Request ';
-  const mailtoLink = 'mailto:support@support.whatsapp.com?subject=' + 
-    encodeURIComponent(subject) + '&body=' + encodeURIComponent(selectedPrompt);
-  window.location.href = mailtoLink;
-}</script>  <!-- BAN SCRIPT -->  <script>const banPrompts = { pk: ["This number {number} is involved in fake investment scams across Pakistan. Kindly block and review urgently.","Scammer {number} was asking for OTP and login verification codes posing as official support. Please ban immediately.","{number} is pretending to be a government officer in Pakistan. Likely a scammer.","This number {number} is sending threats via WhatsApp. Please investigate and block it permanently.","{number} is sharing suspicious illegal content targeting local users.","The number {number} is using stolen Pakistani citizen ID details. Urgent ban needed."], in: ["This number {number} is running scam calls and fake bank schemes in India.","Scammer {number} was asking for 6-digit OTP, claiming bank verification.","{number} is impersonating police or cyber security department. Fraud case.","Threat messages received from number {number}. Needs immediate action.","{number} sharing illegal adult material. Report under IT Act.","The user behind {number} is using stolen Aadhaar identity."], bd: ["Reported scammer {number} from Bangladesh running Telegram crypto groups.","This number {number} requested OTP pretending to be bKash support.","{number} claims to be government but is fake. Scam alert.","Threat message traced from {number}. Need WhatsApp review.","Sharing restricted content through WhatsApp: {number}.","Using fake identity documents on number {number}."], ng: ["Nigerian fraud ring number {number} used in romance scams.","Asked for OTP and PayPal codes: {number}. Fraud risk.","Claiming to be USA consulate: {number}. Pure scam.","Extortion attempt via WhatsApp from {number}.","Sending malware links via {number}.","Using photos and ID of another person on WhatsApp: {number}."], us: ["Number {number} linked to international fraud scheme using fake US identity.","Suspicious activity from number {number}, phishing attempt detected.","{number} used to impersonate WhatsApp official staff. Dangerous!","This number {number} sends extortion messages. Must be blocked.","{number} sharing illegal files and piracy content.","Likely cloned number: {number}. Using someone else's name and picture."]};
-function sendBanRequest() {
-  const number = document.getElementById('scammerNumber').value;
-  const type = document.getElementById('countryType').value;
-  const reportIndex = document.getElementById('reportType').value;
-  const selectedPrompt = banPrompts[type][reportIndex].replace('{number}', number);
-  const subject = 'Scammer Report - ' + number;
-  const mailtoLink = 'mailto:report@support.whatsapp.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(selectedPrompt);
-  window.location.href = mailtoLink;
-}</script>  <!-- BAN2 SCRIPT -->  <script>const prompts2 = { normal: ["I want to report {number} for suspicious activity involving fake investment schemes.","{number} tried to scam me by asking for OTP. Please ban this number.","{number} is impersonating officials and scamming people.","{number} sent threatening and blackmailing messages. Urgent review needed.","{number} is sharing illegal or harmful content via WhatsApp.","Final request to ban number {number}. It is using someone else's identity for scams."], permanent: ["{number} is involved in repeated fraud activity. Final report for permanent ban.","This number {number} has been reported multiple times. Requesting strict action.","Scammer {number} impersonating officials and scamming people internationally.","Abuse and threats were sent from {number}. Permanent ban recommended.","Content from {number} is illegal and violates WhatsApp policies.","Report for identity theft by {number}. Urgently requesting account removal."]};
-function sendRequest2() {
-  const number = document.getElementById('phoneNumber2').value;
-  const type = document.getElementById('banType2').value;
-  const promptIndex = document.getElementById('promptSelect2').value;
-  const selectedPrompt = prompts2[type][promptIndex].replace('{number}', number);
-  const subject = 'Scammer Ban Report';
-  const mailtoLink = 'mailto:report@support.whatsapp.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(selectedPrompt);
-  window.location.href = mailtoLink;
-}</script></body>
-                                                               </html>
+  </script></body>
+</html>
