@@ -1,33 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ULTIMATE WA UNBAN TOOL - PREMIUM</title>
+  <style>
+    /* MODERN GOOGLE FONTS */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap');
 
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>WHATSAPP UNBANNED TOOL</title><style>
-body{margin:0;font-family:'Courier New',monospace;color:#0f0;background:#000;padding:20px;display:flex;justify-content:center;align-items:center;min-height:100vh}
-.container{width:100%;max-width:500px;padding:25px;background:#111;border:1px solid #0f0;box-shadow:0 0 15px rgba(0,255,0,.3)}
-h1{font-size:24px;text-align:center;margin-bottom:25px;color:#0f0;text-shadow:0 0 5px #0f0}
-label{display:block;margin:20px 0 8px;color:#0f0;font-weight:bold}
-select,input{width:100%;padding:12px;margin-bottom:15px;background:#000;color:#0f0;border:1px solid #0f0;font-family:'Courier New',monospace;font-size:16px}
-button{width:100%;padding:15px;margin-top:25px;background:#030;color:#0f0;border:1px solid #0f0;font-family:'Courier New',monospace;font-size:18px;font-weight:bold;cursor:pointer;transition:.3s}
-button:hover{background:#0f0;color:#000}
-.footer{margin-top:30px;text-align:center;font-size:14px;color:#0ff;font-weight:bold;text-shadow:0 0 6px #0ff}
-.whatsapp-link{display:inline-block;margin-top:15px;padding:8px 15px;color:#0f0;text-decoration:none;border:1px solid #0f0;transition:.3s}
-.whatsapp-link:hover{background:#0f0;color:#000}
-hr{border:0;height:1px;background:#0f0;margin:20px 0;opacity:.3}
-.prompt-option{font-size:14px}
-#x7{display:block;margin:0 auto;width:95%;text-align:center}
-</style></head><body><div class="container"><h1>WHATSAPP UNBAN TOOL</h1><label>SELECT VIP MODE:</label><select id="x1"><option value="normal">VIP UNBAN REQUEST</option><option value="permanent" selected>VIP FINAL REVIEW</option></select><hr><label>ENTER YOUR NUMBER</label><input type="text" id="x7" placeholder="e.g. +923001234567"><hr><label>SELECT VIP APPEAL TYPE:</label><select id="x2"><option value="0" class="prompt-option">🟢 VIP 1: Soft Apology Appeal</option><option value="1" class="prompt-option">🟢 VIP 2: System Error Clarification</option><option value="2" class="prompt-option">🟢 VIP 3: Future Compliance Promise</option><option value="3" class="prompt-option">🟢 VIP 4: Personal Emergency Case</option><option value="4" class="prompt-option">🟢 VIP 5: Misunderstood Activity Appeal</option><option value="5" class="prompt-option" selected>🟢 VIP 6: Final Hope Declaration</option></select><button onclick="_()">SEND UNBAN REQUEST</button>
-<div class="footer">
-  🚀 DEVELOPED BY <span id="dev" style="color:#ffffff;"></span> &nbsp;|&nbsp; © 2025 &nbsp;|&nbsp; 
-  <span id="status" style="color:#00ff00;"></span><br>
-  <a id="link" class="whatsapp-link" target="_blank">JOIN OUR WHATSAPP CHANNEL</a>
-</div>
+    * { box-sizing: border-box; transition: all 0.3s ease; }
+    
+    body {
+      margin: 0;
+      font-family: 'Rajdhani', sans-serif;
+      color: #e0e0e0;
+      background: radial-gradient(circle at center, #0a192f 0%, #020617 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      padding: 20px;
+    }
 
-<script>
-(function(){
-  function decode(x) {
-    return atob(x);
-  }
-  document.getElementById('dev').innerText = decode('UUFERUVSLUtIQU4=');
-  document.getElementById('status').innerText = decode('QUxMIFNZU1RFTVMgT1BFUkFUSU9OQUw=');
-  document.getElementById('link').setAttribute('href', decode('aHR0cHM6Ly93aGF0c2FwcC5jb20vY2hhbm5lbC8wMDI5VmF3NnlSYUJQempaUHRWdEE4MEE='));
-})();
-</script>
-</div><script>eval(atob('CihmdW5jdGlvbigpewogIGNvbnN0IGE9ewogICAgbm9ybWFsOlsKICAgICAgIkRlYXIgU3VwcG9ydCwgbXkgbnVtYmVyIHtufSB3YXMgbGlrZWx5IGZsYWdnZWQgYnkgbWlzdGFrZS4gS2luZGx5IHJldmlldyBhbmQgcmVzdG9yZSBhcyBzb29uIGFzIHBvc3NpYmxlLiIsCiAgICAgICJHcmVldGluZ3MsIGl0IHNlZW1zIHRoYXQge259IHdhcyB3cm9uZ2x5IGJhbm5lZCwgcG9zc2libHkgZHVlIHRvIGEgc3lzdGVtIGVycm9yLiBQbGVhc2UgdmVyaWZ5IGFuZCBhc3Npc3QuIiwKICAgICAgIkhlbGxvIFRlYW0sIEkgZnVsbHkgcmVzcGVjdCBXaGF0c0FwcCBydWxlcy4gUGxlYXNlIHVuYmFuIHtufSBhbmQgSSBwcm9taXNlIHRvIHN0cmljdGx5IGZvbGxvdyBhbGwgcG9saWNpZXMgbW92aW5nIGZvcndhcmQuIiwKICAgICAgIk15IG51bWJlciB7bn0gd2FzIGJhbm5lZCBkdXJpbmcgYSBmYW1pbHkgZW1lcmdlbmN5LiBLaW5kbHkgcmV2aWV3IGFuZCByZWFjdGl2YXRlIGl0IHVyZ2VudGx5LiIsCiAgICAgICJJIGJlbGlldmUgV2hhdHNBcHAgbWlzdW5kZXJzdG9vZCBteSByZWNlbnQgYWN0aXZpdHkgb24ge259LiBLaW5kbHkgcmV2aWV3IGFuZCBndWlkZSBpZiBjb3JyZWN0aW9uIGlzIG5lZWRlZC4iLAogICAgICAiRGVhciBTdXBwb3J0LCB0aGlzIGlzIG15IGZpbmFsIHBsZWEuIEkgcmVxdWVzdCB5b3VyIG1lcmN5IGluIHJlc3RvcmluZyBudW1iZXIge259IGZvciBjb250aW51ZWQgY29tbXVuaWNhdGlvbi4iCiAgICBdLAogICAgcGVybWFuZW50OlsKICAgICAgIk15IG51bWJlciB7bn0gaGFzIGJlZW4gcGVybWFuZW50bHkgYmFubmVkLiBJIGRlZXBseSByZWdyZXQgdGhpcy4gUGxlYXNlIGdyYW50IG9uZSBmaW5hbCBvcHBvcnR1bml0eSBmb3IgcmVzdG9yYXRpb24uIiwKICAgICAgIlJlc3BlY3RmdWxseSByZXF1ZXN0aW5nIHJlLWV2YWx1YXRpb24gb2YgbnVtYmVyIHtufS4gSSBhc3N1cmUgeW91IGZ1bGwgY29tcGxpYW5jZSBhbmQgbm8gZnV0dXJlIHZpb2xhdGlvbnMuIiwKICAgICAgIkhlbGxvLCBJIGtpbmRseSByZXF1ZXN0IFdoYXRzQXBwIHRvIHJlY29uc2lkZXIgdGhlIGJhbiBvbiB7bn0uIEkgdHJ1bHkgbmVlZCBhY2Nlc3MgYmFjayBmb3IgaW1wb3J0YW50IGNvbW11bmljYXRpb25zLiIsCiAgICAgICJJIHRha2UgZnVsbCByZXNwb25zaWJpbGl0eSBmb3IgYW55IHZpb2xhdGlvbnMuIEtpbmRseSByZXZpZXcgbnVtYmVyIHtufSB3aXRoIHVuZGVyc3RhbmRpbmcuIFRoaXMgaXMgbXkgbGFzdCBob3BlLiIsCiAgICAgICJEZWFyIFN1cHBvcnQsIHBsZWFzZSBhbGxvdyBhIGZpbmFsIHJldmlldyBvZiB7bn0uIElmIGFueSBlcnJvcnMgb2NjdXJyZWQgdW5rbm93aW5nbHksIEkgYW0gcmVhZHkgdG8gY29vcGVyYXRlIGFuZCByZXNvbHZlLiIsCiAgICAgICJGaW5hbCBhcHBlYWw6IFBsZWFzZSB2ZXJpZnkgYWNjb3VudCB7bn0gb25jZSBhZ2Fpbi4gSSByZWx5IG9uIFdoYXRzQXBwIGJvdGggcHJvZmVzc2lvbmFsbHkgYW5kIHBlcnNvbmFsbHkuIFlvdXIgaGVscCBtZWFucyBldmVyeXRoaW5nLiIKICAgIF0KICB9OwogIHdpbmRvdy5fPWZ1bmN0aW9uKCl7CiAgICBjb25zdCBiPWRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJ4NyIpLnZhbHVlLAogICAgYz1kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgieDEiKS52YWx1ZSwKICAgIGQ9ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoIngyIikudmFsdWUsCiAgICBlPWFbY11bZF0ucmVwbGFjZSgie259IixiKSwKICAgIGY9IlVuYmFuIFJlcXVlc3QgIiwKICAgIGc9Im1haWx0bzpzdXBwb3J0QHN1cHBvcnQud2hhdHNhcHAuY29tP3N1YmplY3Q9IitlbmNvZGVVUklDb21wb25lbnQoZikrIiZib2R5PSIrZW5jb2RlVVJJQ29tcG9uZW50KGUpOwogICAgd2luZG93LmxvY2F0aW9uLmhyZWY9ZzsKICB9Owp9KSgpOwo='));</script></body></html>
+    /* GLASS CONTAINER */
+    .container {
+      width: 100%;
+      max-width: 450px;
+      padding: 30px;
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 255, 255, 0.1);
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #00f2ff;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 0 0 15px rgba(0, 242, 255, 0.5);
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 13px;
+      color: #00f2ff;
+      letter-spacing: 1px;
+    }
+
+    /* INPUTS & SELECTS */
+    select, input {
+      width: 100%;
+      padding: 14px;
+      background: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      border: 1px solid rgba(0, 242, 255, 0.3);
+      border-radius: 10px;
+      font-size: 16px;
+      outline: none;
+      margin-bottom: 10px;
+    }
+    
+    select:focus, input:focus {
+      border-color: #00f2ff;
+      background: rgba(0, 242, 255, 0.05);
+      box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+    }
+
+    /* MAIN BUTTON (NEON GLOW) */
+    .btn-main {
+      width: 100%;
+      padding: 16px;
+      margin-top: 20px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      color: white;
+      box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-main:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 198, 255, 0.6);
+      filter: brightness(1.1);
+    }
+
+    .btn-main:active {
+      transform: translateY(1px);
+    }
+
+    /* PANEL SECTION */
+    .system-panel {
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      border: 1px dashed rgba(255, 255, 255, 0.2);
+    }
+    
+    .panel-title {
+      text-align: center;
+      color: #00f2ff;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-decoration: underline;
+    }
+
+    /* SECONDARY BUTTON */
+    .btn-secondary {
+      width: 100%;
+      padding: 12px;
+      background: transparent;
+      color: #00f2ff;
+      border: 1px solid #00f2ff;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(0, 242, 255, 0.1);
+    }
+
+    /* FOOTER */
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+    }
+
+    .whatsapp-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #00f2ff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 15px;
+      border: 1px solid rgba(0, 242, 255, 0.3);
+      border-radius: 20px;
+    }
+
+    .whatsapp-link:hover {
+      background: #00f2ff;
+      color: #000;
+    }
+
+    /* GLOWING DOT ANIMATION */
+    .status {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 12px;
+      margin-bottom: 20px;
+      color: #4ade80;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: #4ade80;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #4ade80;
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>UNBAN PRO ☣</h1>
+
+    <div class="status">
+      <div class="dot"></div> SYSTEM ONLINE (BY QADEER)
+    </div>
+    
+    <label>Select Ban Category</label>
+    <select id="banType" onchange="updateOptions()">
+      <option value="temporary">⚠️ TEMPORARY (TIMER)</option>
+      <option value="permanent" selected>🚫 PERMANENT (SPAM)</option>
+      <option value="business">💼 BUSINESS API</option>
+    </select>
+
+    <label>Target Number</label>
+    <input type="text" id="phoneNumber" placeholder="+923001234567">
+
+    <label>Power Appeal Method</label>
+    <select id="promptSelect"></select>
+
+    <button class="btn-main" onclick="sendFastEmail()">
+      🚀 EXECUTE UNBAN REPORT
+    </button>
+
+    <div class="system-panel">
+      <div class="panel-title">BACKUP METHODS</div>
+      <button class="btn-secondary" onclick="openOfficialSite()">
+        🌐 OPEN OFFICIAL FORM
+      </button>
+    </div>
+
+    <div class="footer">
+      MADE WITH ❤️ BY <span style="color:#00f2ff; font-weight: bold;">QADEER KHAN</span>
+      <br>
+      <a class="whatsapp-link" href="https://whatsapp.com/channel/0029Vb7lx2gEquiMB6IE550l" target="_blank">
+        JOIN WA CHANNEL
+      </a>
+    </div>
+
+  </div>
+
+  <script>
+    const reports = {
+      temporary: [
+        { label: "VIP 1: Remove Timer Request", text: "My WhatsApp is showing a temporary ban timer. I use official WhatsApp. Please remove this timer immediately." },
+        { label: "VIP 2: Accidental Flagging", text: "I was just added to a group and got banned. I did not send spam. Please fix this system error." }
+      ],
+      permanent: [
+        { label: "🔥 VIP 1: SYSTEM ERROR (Fast)", text: "Hello WhatsApp Support, My number {number} has been banned due to a mistake. I am a strict follower of your Terms of Service. Please review my account activity manually and restore it." },
+        { label: "🔥 VIP 2: ACCOUNT HACKED REPORT", text: "My account {number} was compromised recently. The suspicious activity was not done by me. Please secure my account and unban it." },
+        { label: "🔥 VIP 3: MEDICAL EMERGENCY", text: "URGENT: My number {number} is used for medical coordination. This ban is putting lives at risk. Unban immediately for humanitarian reasons." }
+      ],
+      business: [
+        { label: "B1: API Misunderstanding", text: "My Business API number {number} was flagged. We have valid opt-ins from all customers. Please review the template quality score." }
+      ]
+    };
+
+    function updateOptions() {
+      const type = document.getElementById('banType').value;
+      const select = document.getElementById('promptSelect');
+      select.innerHTML = ""; 
+      reports[type].forEach((item, index) => {
+        const option = document.createElement("option");
+        option.value = index;
+        option.text = item.label;
+        select.appendChild(option);
+      });
+    }
+
+    window.onload = updateOptions;
+
+    function sendFastEmail() {
+      const number = document.getElementById('phoneNumber').value;
+      if(!number) { alert("Enter Number First!"); return; }
+
+      const type = document.getElementById('banType').value;
+      const index = document.getElementById('promptSelect').value;
+      let message = reports[type][index].text.replace('{number}', number);
+      message += "\n\nDevice: Android 14\nApp Version: 2.24.1.1\nSupport Ref: #3390122";
+      const subject = `Question about WhatsApp for Android: ${number}`;
+      const mailto = `mailto:support@support.whatsapp.com,smb@support.whatsapp.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+      window.location.href = mailto;
+    }
+
+    function openOfficialSite() {
+      window.open("https://www.whatsapp.com/contact/noclient?subject=Messenger", "_blank");
+    }
+  </script>
+</body>
+</html>
